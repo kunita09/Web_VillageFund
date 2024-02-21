@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>หน้าหลัก</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+	<style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .fund-head {
+            width: 80%;
+            height: 500px;
+            margin-left: 10%;
+        }
+
+        .fund-body {
+            width: 35rem;
+            margin-left: 50px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+     <!-- Nav -->
+     <div class="container px-0 mx-0 w-100">
+        <nav class="navbar navbar-light navbar-expand-xl py-4 px-4 border-bottom-5 border-dark">
+            <a href="index.html" class="navbar-brand">
+                <img src="http://www.villagefund.or.th//app-assets/images/villagefund_1.png" class="logo" alt="logo">
+            </a>
+            <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse float-end" id="navbarCollapse">
+                <div class="navbar-nav ms-auto ">
+                    <a href="index.html" class="nav-item nav-link">หน้าหลัก</a>
+                    <a href="about.html" class="nav-item nav-link">เกี่ยวกับ</a>
+                    <a href="#" class="nav-item nav-link">สมาชิก</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ธุรกรรม</a>
+                        <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                            <a href="/request" class="dropdown-item">ยื่นคำร้อง</a>
+                            <a href="#" class="dropdown-item">ตรวจสอบสถานะ</a>
+                        </div>
+                    </div>
+                    <a href="/contact" class="nav-item nav-link">ติดต่อเรา</a>
+                </div>
+
+            </div>
+            <div class="navbar-nav login">
+                <a href="/login" class="navbar nav-link">เข้าสู่ระบบ</a>
+            </div>
+            <button class="btn-search btn btn-primary btn-md-square rounded-circle" data-bs-toggle="modal"
+                data-bs-target="#searchModal"><i class="fas fa-search text-white"></i></button>
+    </div>
+    </nav>
+    </div>
+    </div>
+    
+     <img src="./img/main_img.jpg" class="fund-head" alt="">
+    <div class="container-fluid py-5 about bg-light">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <!-- <div class="video border">
+                        <button type="button" class="btn btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                    </div> -->
+                    <img src="./img/fund.jpg" class="fund-body" style="border-radius: 10px;">
+                </div>
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                    <!-- <h4
+                        class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">
+                        About Us</h4> -->
+                    <h1 class="text-dark mb-4 display-5" style="font-family: 'kanit';">
+                        ปัญหาแท้จริงที่พบจากการไปสัมผัสกับกองทุนหมู่บ้าน คือ
+                        การไม่เท่าทันเทคโนโลยีสมัยใหม่</h1>
+                    <p class="text-dark mb-4">มีมุมมองและวิธีคิดที่ไปไกลมาก ซึ่งที่ค้นพบ คือ ถ้าเรามีปัญญา มีวิธีคิด
+                        โดยมหาวิทยาลัยเข้าไปช่วยเหลือในเรื่องวิชาการ ก็สามารถเดินต่อไปได้ ยกตัวอย่าง
+                        กลไกที่จะไปช่วยขับเคลื่อนกองทุนหมู่บ้าน เรื่องร้านค้ากองทุนหมู่บ้าน ทำให้ประชาชนมีการรวมตัวกัน
+                        ถ้าสมมติร้านค้ากองทุนหมู่บ้านที่มี 20,000 ร้านค้า มีดอกมีผล
+                        แล้วส่งต่อให้ชุมชนจะช่วยให้เกิดความยั่งยืน
+                    </p>
+                    
+                    <a href="" class="btn btn-primary px-5 py-3 btn-border-radius">More Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid events py-5 bg-light">
+        <div class="container py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+
+                <h1 class="mb-5 display-3" style="font-family: 'kanit';">ประชาสัมพันธ์</h1>
+            </div>
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="events-item bg-primary rounded">
+                        <div class="events-inner position-relative">
+                            <div class="events-img overflow-hidden rounded-circle position-relative">
+                                <!-- <img src="img/event-1.jpg" class="img-fluid w-100 rounded-circle" alt="Image"> -->
+                                <div class="event-overlay">
+                                    <a href="img/event-1.jpg" data-lightbox="event-1"><i
+                                            class="fas fa-search-plus text-white fa-2x"></i></a>
+                                </div>
+                            </div>
+                            <div class="h-100 bg-secondary text-white text-center events-rate">29 ก.ย. 2565</div>
+                            <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
+                                <small class="text-white"><i class="fas fa-calendar me-1 text-primary"></i> 10:00 น. -
+                                    12:00 น.</small>
+                                <small class="text-white"><i class="fas fa-map-marker-alt me-1 text-primary"></i>
+                                    ขอนแก่น</small>
+                            </div>
+                        </div>
+                        <div class="events-text p-4 border border-primary bg-white border-top-0 rounded-bottom">
+                            <a href="#" class="h4" style="font-family: 'kanit';">เรื่องที่ 1</a>
+                            <p class="mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                                purus consectetur,</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="events-item bg-primary rounded">
+                        <div class="events-inner position-relative">
+                            <div class="events-img overflow-hidden rounded-circle position-relative">
+                                <!-- <img src="img/event-2.jpg" class="img-fluid w-100 rounded-circle" alt="Image"> -->
+                                <div class="event-overlay">
+                                    <a href="img/event-3.jpg" data-lightbox="event-1"><i
+                                            class="fas fa-search-plus text-white fa-2x"></i></a>
+                                </div>
+                            </div>
+                            <div class="h-100 bg-secondary text-white text-center events-rate">29 ก.ย. 2565</div>
+                            <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
+                                <small class="text-white"><i class="fas fa-calendar me-1 text-primary"></i> 10:00 น. -
+                                    12:00 น.</small>
+                                <small class="text-white"><i class="fas fa-map-marker-alt me-1 text-primary"></i>
+                                    ขอนแก่น</small>
+                            </div>
+                        </div>
+                        <div class="events-text p-4 border border-primary bg-white border-top-0 rounded-bottom">
+                            <a href="#" class="h4" style="font-family: 'kanit';">เรื่องที่ 2</a>
+                            <p class="mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                                purus consectetur,</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="events-item bg-primary rounded">
+                        <div class="events-inner position-relative">
+                            <div class="events-img overflow-hidden rounded-circle position-relative">
+                                <!-- <img src="img/event-3.jpg" class="img-fluid w-100 rounded-circle" alt="Image"> -->
+                                <div class="event-overlay">
+                                    <a href="img/event-3.jpg" data-lightbox="event-1"><i
+                                            class="fas fa-search-plus text-white fa-2x"></i></a>
+                                </div>
+                            </div>
+                            <div class="h-100 bg-secondary text-white text-center events-rate">29 ก.ย. 2565</div>
+                            <div class="d-flex justify-content-between px-4 py-2 bg-secondary">
+                                <small class="text-white"><i class="fas fa-calendar me-1 text-primary"></i> 10:00 น. -
+                                    12:00 น.</small>
+                                <small class="text-white"><i class="fas fa-map-marker-alt me-1 text-primary"></i>
+                                    ขอนแก่น</small>
+                            </div>
+                        </div>
+                        <div class="events-text p-4 border border-primary bg-white border-top-0 rounded-bottom">
+                            <a href="#" class="h4" style="font-family: 'kanit';">เรื่องที่ 3</a>
+                            <p class="mb-0 mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                                purus consectetur,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Events End-->
+
+    
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
